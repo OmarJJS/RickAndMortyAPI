@@ -26,13 +26,13 @@ final class SearchInputViewViewModel {
         var choices: [String] {
             switch self {
             case .status:
-                return ["alive", "dead", "unknown"]
+                return ["alive", "dead", "unknown", "All"]
 
             case .gender:
-                return ["male", "female", "genderless", "unknown"]
+                return ["male", "female", "genderless", "unknown", "All"]
 
             case .locationType:
-                return ["cluster", "planet", "microverse"]
+                return ["cluster", "planet", "microverse", "All"]
             }
         }
     }

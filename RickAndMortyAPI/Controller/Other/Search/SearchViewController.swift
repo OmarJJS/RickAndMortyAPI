@@ -63,12 +63,6 @@ class SearchViewController: UIViewController {
         view.backgroundColor = .systemBackground
         view.addSubview(searchView)
         addConstraints()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            title: "Search",
-            style: .done,
-            target: self,
-            action: #selector(didTapExecuteSearch)
-        )
         searchView.delegate = self
     }
 

@@ -34,7 +34,6 @@ class EpisodeDetailViewController: UIViewController, EpisodeDetailViewViewModelD
         addConstraints()
         detailView.delegate = self
         title = "Episode"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(didTapShare))
 
         viewModel.delegate = self
         viewModel.fetchEpisodeData()
@@ -47,11 +46,6 @@ class EpisodeDetailViewController: UIViewController, EpisodeDetailViewViewModelD
             detailView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
             detailView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
-    }
-
-    @objc
-    private func didTapShare() {
-
     }
 
     // MARK: - View Delegate

@@ -11,6 +11,7 @@ enum CharacterStatus: String, Codable {
     case alive = "Alive"
     case dead = "Dead"
     case `unknown` = "unknown"
+    case all = ""
 
     var text: String {
         switch self {
@@ -18,6 +19,9 @@ enum CharacterStatus: String, Codable {
             return rawValue
         case .unknown:
             return "Unknown"
+        case .all:
+            return ""
+//            return "Alive, Dead, unknown"
         }
     }
 }

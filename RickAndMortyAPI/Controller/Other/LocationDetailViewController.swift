@@ -34,7 +34,6 @@ class LocationDetailViewController: UIViewController, LocationDetailViewViewMode
         addConstraints()
         detailView.delegate = self
         title = "Location"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(didTapShare))
 
         viewModel.delegate = self
         viewModel.fetchLocationData()
@@ -47,11 +46,6 @@ class LocationDetailViewController: UIViewController, LocationDetailViewViewMode
             detailView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
             detailView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
-    }
-
-    @objc
-    private func didTapShare() {
-
     }
 
     // MARK: - View Delegate
