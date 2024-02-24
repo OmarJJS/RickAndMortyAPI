@@ -44,7 +44,7 @@ class TabViewController: UITabBarController {
         }
         
         setViewControllers(
-            [navCharacter, navLocation, navEpisode, navSettings],
+            [navCharacter, navLocation, navEpisode, /*navSettings*/],
             animated : true
         )
         
