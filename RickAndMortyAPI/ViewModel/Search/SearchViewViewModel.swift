@@ -44,12 +44,18 @@ final class SearchViewViewModel {
         var queryParams: [URLQueryItem] = [
             URLQueryItem(name: "name", value: searchText.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed))
         ]
-        queryParams.append(contentsOf: optionMap.enumerated().compactMap({ _, element in
-            let key: SearchInputViewViewModel.DynamicOption = element.key
+        var value = optionMap.enumerated().compactMap({_, element in
+            let key:
+            SearchInputViewViewModel.DynamicOption = element.key
             let value: String = element.value
             return URLQueryItem(name: key.queryArgument, value: value)
-        }))
-
+        })
+        for valueOption in value{
+            if valueOption.value != "All" {
+                queryParams.append(valueOption)
+            }
+        }
+        
         let request = Request(
             endpoint: config.type.endpoint,
             queryParameters: queryParams
